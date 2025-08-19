@@ -1,0 +1,2 @@
+# CraftMegaFun
+Minecraft serwer page
