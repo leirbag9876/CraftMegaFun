@@ -9,13 +9,13 @@
     header { background:#2b2b2b; padding:20px; text-align:center; }
     header h1 { margin:0; color:#f39c12; }
     header p { margin:5px 0 0 0; color:#ccc; }
-    nav { background:#333; display:flex; justify-content:center; }
+    nav { background:#333; display:flex; justify-content:center; flex-wrap: wrap; }
     nav a { color:#fff; text-decoration:none; padding:15px 20px; display:block; }
     nav a:hover { background:#444; }
     section { padding:40px 20px; max-width:900px; margin:auto; }
     section h2 { color:#f39c12; margin-bottom:20px; }
     footer { background:#2b2b2b; text-align:center; padding:15px; color:#ccc; }
-    a.button { display:inline-block; background:#f39c12; color:#fff; padding:10px 20px; text-decoration:none; border-radius:5px; margin-top:10px; }
+    a.button { display:inline-block; background:#f39c12; color:#fff; padding:10px 20px; text-decoration:none; border-radius:5px; margin-top:10px; transition:0.3s; }
     a.button:hover { background:#e67e22; }
   </style>
 </head>
@@ -29,31 +29,50 @@
 <nav>
   <a href="#o-serwerze">O serwerze</a>
   <a href="#sklep">Sklep</a>
-  <a href="forum.html" class="button">Przejdź do forum</a>  
-  <a href="kontakt.html">Formularze</a>
+  <a href="forum.html">Przejdź do forum</a>  
+  <a href="kontakt.html">Rekrutacja</a>
 </nav>
 
 <section id="o-serwerze">
   <h2>O serwerze</h2>
-  <p>Witaj na serwerze CraftMegaFun! Oferujemy tryby gry takie jak Lifesteal, OneBlock i wiele innych. Nasz serwer działa na najnowszej wersji Minecraft i oferuje wyjątkowe rangi oraz eventy dla graczy.</p>
+  <p>
+    <strong>CraftMegaFun</strong> to wyjątkowy serwer Minecraft, który został stworzony z myślą o graczach szukających emocjonującej i 
+    dynamicznej rozgrywki. Naszym głównym trybem jest <strong>Lifesteal</strong>, dostępny od wersji <strong>1.8 aż do 1.20.4</strong>. 
+    W tym trybie każde zwycięstwo nad przeciwnikiem pozwala Ci przejąć jedno z jego serc i wykorzystać je do wzmocnienia własnej postaci. 
+    Uważaj jednak – przegrana oznacza, że sam możesz stracić cenne życie!
+  </p>
+  <p>
+    Dodatkowo na serwerze znajdziesz także inne ciekawe atrakcje, takie jak:
+  </p>
+  <ul>
+    <li><strong>OneBlock</strong> – klasyczna zabawa od jednego bloku do własnego imperium.</li>
+    <li><strong>Eventy</strong> – regularnie organizujemy konkursy, turnieje PvP i zabawy społecznościowe.</li>
+    <li><strong>Rangi i nagrody</strong> – system unikalnych rang i osiągnięć motywuje do rywalizacji.</li>
+    <li><strong>Ranking graczy</strong> – sprawdź, kto jest najlepszym wojownikiem na serwerze!</li>
+  </ul>
+  <p>
+    Nasza społeczność jest przyjazna i otwarta na nowych graczy. Dołącz do CraftMegaFun, zaproś znajomych i stań się częścią jednej z 
+    najbardziej ekscytujących przygód w świecie Minecraft!
+  </p>
 </section>
 
 <section id="sklep">
   <h2>Sklep</h2>
-  <p>Chcesz zdobyć rangi, klucze do skrzyń i przedmioty premium? Odwiedź nasz sklep!</p>
+  <p>Chcesz zdobyć rangi, klucze do skrzyń i przedmioty premium? Odwiedź nasz sklep i wspieraj rozwój serwera!</p>
   <a href="https://CraftMegaFun.chsrv.pl/sklep" class="button">Przejdź do sklepu</a>
 </section>
 
 <section id="forum">
   <h2>Forum</h2>
-  <p>Masz pytania, sugestie lub chcesz porozmawiać z innymi graczami? Odwiedź nasze forum.</p>
+  <p>Masz pytania, sugestie lub chcesz porozmawiać z innymi graczami? Nasze forum to idealne miejsce do integracji społeczności.</p>
   <a href="forum.html" class="button">Przejdź do forum</a>
 </section>
 
 <section id="formularze">
-  <h2>Formularze</h2>
-  <p>Masz problem z serwerem lub chcesz się z nami skontaktować? Wypełnij formularz kontaktowy.</p>
-  <a href="kontakt.html" class="button">Formularz kontaktowy</a>
+  <h2>Rekrutacja</h2>
+  <p>Chcesz dołączyć do ekipy serwera i pomóc w jego rozwoju? Obecnie prowadzimy rekrutację na różne stanowiska. 
+     Przejdź do zakładki <strong>Rekrutacja</strong> i wypełnij formularz!</p>
+  <a href="kontakt.html" class="button">Przejdź do rekrutacji</a>
 </section>
 
 <footer>
