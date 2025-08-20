@@ -5,67 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rekrutacja - CraftMegaFun</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #2b2b2b;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      background: #2b2b2b;
-      color: #fff;
-      padding: 30px 20px;
-      font-size: 26px;
-      font-weight: bold;
-    }
-    main {
-      padding: 40px 20px;
-    }
-    h2 {
-      color: #ff6600;
-      font-size: 22px;
-      margin-bottom: 40px;
-    }
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-    .btn {
-      background: #ff6600;
-      color: #fff;
-      padding: 20px 40px;
-      font-size: 20px;
-      font-weight: bold;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: 0.3s;
-      text-decoration: none;
-      display: inline-block;
-      min-width: 200px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    .btn:hover {
-      background: #e65c00;
-      transform: scale(1.05);
-    }
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#1e1e1e; color:#fff; }
+    header { background:#2b2b2b; padding:20px; text-align:center; }
+    header h1 { margin:0; color:#f39c12; }
+    header p { margin:5px 0 0 0; color:#ccc; }
+    nav { background:#333; display:flex; justify-content:center; }
+    nav a { color:#fff; text-decoration:none; padding:15px 20px; display:block; }
+    nav a:hover { background:#444; }
+    section { padding:40px 20px; max-width:900px; margin:auto; text-align:center; }
+    section h2 { color:#f39c12; margin-bottom:30px; }
+    .buttons { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+    a.button { display:inline-block; background:#f39c12; color:#fff; padding:20px 40px; text-decoration:none; border-radius:8px; font-size:20px; font-weight:bold; transition:0.3s; min-width:200px; }
+    a.button:hover { background:#e67e22; transform:scale(1.05); }
+    footer { background:#2b2b2b; text-align:center; padding:15px; color:#ccc; margin-top:40px; }
   </style>
 </head>
 <body>
-  <header>
-    Rekrutacja - CraftMegaFun
-  </header>
-  <main>
-    <h2>Obecnie rekrutujemy na poniższe role:</h2>
-    <div class="buttons">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScWZ7u9hlnyoYq3pHE2l8xz3L-cC2mWeh9CPufRmNst22uHGg/viewform" class="btn">Budowniczy</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScWZ7u9hlnyoYq3pHE2l8xz3L-cC2mWeh9CPufRmNst22uHGg/viewform" class="btn">ChatMod</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScWZ7u9hlnyoYq3pHE2l8xz3L-cC2mWeh9CPufRmNst22uHGg/viewform" class="btn">Moderator</a>
-    </div>
-  </main>
+
+<header>
+  <h1>CraftMegaFun</h1>
+  <p>IP serwera: <strong>CraftMegaFun.chsrv.pl</strong></p>
+</header>
+
+<nav>
+  <a href="index.html">Strona Główna</a>
+  <a href="kontakt.html">Rekrutacja</a>
+</nav>
+
+<section>
+  <h2>Obecnie rekrutujemy na poniższe role:</h2>
+  <div class="buttons">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeHDKvIQXcnqMyJtBGK2UfmAa6tqk3SE0EAXvKUuqnGhDHIAw/viewform" class="button">Budowniczy</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeHDKvIQXcnqMyJtBGK2UfmAa6tqk3SE0EAXvKUuqnGhDHIAw/viewform" class="button">Moderator</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeHDKvIQXcnqMyJtBGK2UfmAa6tqk3SE0EAXvKUuqnGhDHIAw/viewform" class="button">ChatMod</a>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 CraftMegaFun - Wszystkie prawa zastrzeżone.
+</footer>
+
 </body>
 </html>
