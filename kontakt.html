@@ -2,40 +2,70 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Formularze</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rekrutacja - CraftMegaFun</title>
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; }
-    iframe { margin-top: 20px; border: none; }
-    select { padding: 8px; margin: 20px; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #ff6600;
+      color: #fff;
+      padding: 30px 20px;
+      font-size: 26px;
+      font-weight: bold;
+    }
+    main {
+      padding: 40px 20px;
+    }
+    h2 {
+      color: #ff6600;
+      font-size: 22px;
+      margin-bottom: 40px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      background: #ff6600;
+      color: #fff;
+      padding: 20px 40px;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+      display: inline-block;
+      min-width: 200px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .btn:hover {
+      background: #e65c00;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
-  <h1>Wybierz formularz</h1>
-  <select id="formularzSelect" onchange="zmienFormularz()">
-    <option value="">-- wybierz rolę --</option>
-    <option value="Budowniczy">Budowniczy</option>
-    <option value="Chatmod">Chatmod</option>
-    <option value="Moderator">Moderator</option>
-  </select>
-
-  <div id="formularzContainer"></div>
-
-  <script>
-    function zmienFormularz() {
-      const select = document.getElementById("formularzSelect").value;
-      const container = document.getElementById("formularzContainer");
-
-      let link = "";
-      if (select === "rekrutacja") {
-        link = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeHDKvIQXcnqMyJtBGK2UfmAa6tqk3SE0EAXvKUuqnGhDHIAw/viewform?embedded=true" width="640" height="1047" frameborder="0" marginheight="0" marginwidth="0">Ładuję…</iframe>';
-      } else if (select === "wspolpraca") {
-        link = '<iframe src="TUTAJ_LINK_DO_FORMULARZA_WSPOLPRACA" width="640" height="1047" frameborder="0" marginheight="0" marginwidth="0">Ładuję…</iframe>';
-      } else if (select === "kontakt") {
-        link = '<iframe src="TUTAJ_LINK_DO_FORMULARZA_KONTAKT" width="640" height="1047" frameborder="0" marginheight="0" marginwidth="0">Ładuję…</iframe>';
-      }
-
-      container.innerHTML = link;
-    }
-  </script>
+  <header>
+    Rekrutacja - CraftMegaFun
+  </header>
+  <main>
+    <h2>Obecnie rekrutujemy na poniższe role:</h2>
+    <div class="buttons">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScWZ7u9hlnyoYq3pHE2l8xz3L-cC2mWeh9CPufRmNst22uHGg/viewform" class="btn">Budowniczy</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScWZ7u9hlnyoYq3pHE2l8xz3L-cC2mWeh9CPufRmNst22uHGg/viewform" class="btn">ChatMod</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScWZ7u9hlnyoYq3pHE2l8xz3L-cC2mWeh9CPufRmNst22uHGg/viewform" class="btn">Moderator</a>
+    </div>
+  </main>
 </body>
 </html>
