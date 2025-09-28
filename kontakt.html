@@ -31,13 +31,13 @@
       font-size: 1.2em;
     }
 
-    nav {
+    /* Nawigacja jak na głównej stronie */
+    nav.navbar {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 15px;
+      flex-wrap: wrap;
       margin: 20px 0;
-      z-index: 1000;
     }
 
     .nav-box {
@@ -47,45 +47,46 @@
       font-weight: bold;
       transition: 0.3s;
       font-size: 1em;
+      background: #111;
+      border: 2px solid #0ff;
+      color: #0ff;
     }
 
     .nav-box:hover {
-      transform: translateY(-2px);
+      background: #0ff;
+      color: #000;
+      border-color: #00cccc;
     }
 
-    .nav-box.home { background: #111; border: 2px solid #0ff; color: #0ff; }
-    .nav-box.home:hover { background: #0ff; color: #000; border-color: #00cccc; }
-
-    .nav-box.shop { 
-      background: linear-gradient(45deg, #ff6600, #ffcc00); 
-      color: #000; 
+    .shop-box {
+      background: linear-gradient(45deg, #ff6600, #ffcc00);
       border: 2px solid #ff6600;
+      color: #000;
       box-shadow: 0 0 10px rgba(255,102,0,0.7);
     }
-    .nav-box.shop:hover {
+
+    .shop-box:hover {
       background: linear-gradient(45deg, #ffcc00, #ff6600);
       box-shadow: 0 0 15px rgba(255,204,0,0.9);
       transform: translateY(-2px);
     }
 
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
+    section.hero {
       text-align: center;
+      padding: 80px 20px;
     }
 
-    section h2 {
+    section.hero h2 {
       color: #ff6600;
-      margin-bottom: 40px;
+      margin: 20px 0 40px 0;
       font-size: 2em;
     }
 
-    .buttons {
+    .hero-buttons {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     .btn-main, .btn-secondary {
@@ -105,6 +106,7 @@
     .btn-secondary { background: #111; border: 2px solid #0ff; color: #0ff; }
     .btn-secondary:hover { background: #0ff; color: #000; }
 
+    /* Stopka */
     footer {
       text-align: center;
       padding: 20px;
@@ -113,7 +115,7 @@
       margin-top: 40px;
     }
 
-    /* Przyciski kopiowania IP */
+    /* Kopiowanie IP */
     .copy-ip {
       display: inline-block;
       background: #0ff;
@@ -135,16 +137,17 @@
   <p>IP serwera: <span class="copy-ip">CraftMegaFun.chsrv.pl</span></p>
 </header>
 
-<nav>
-  <a href="index.html" class="nav-box home">Strona Główna</a>
-  <a href="rekrutacja.html" class="nav-box btn-secondary">Rekrutacja</a>
-  <a href="forum.html" class="nav-box btn-secondary">Forum</a>
-  <a href="sklep.html" class="nav-box shop">Sklep</a>
+<nav class="navbar">
+  <a href="index.html" class="nav-box">Strona Główna</a>
+  <a href="rekrutacja.html" class="nav-box">Rekrutacja</a>
+  <a href="sklep.html" class="nav-box shop-box">Sklep</a>
+  <a href="pomoc.html" class="nav-box">Pomoc</a>
+  <a href="informacje.html" class="nav-box">Informacje</a>
 </nav>
 
-<section>
+<section class="hero">
   <h2>Obecnie rekrutujemy na poniższe role:</h2>
-  <div class="buttons">
+  <div class="hero-buttons">
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSeHDKvIQXcnqMyJtBGK2UfmAa6tqk3SE0EAXvKUuqnGhDHIAw/viewform" 
        class="btn-main" target="_blank" rel="noopener noreferrer">Budowniczy</a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLScPMPfkuXFSQUT-oNEgrvQjxf5ISux8oTZR5DpRKU4P_UJHTg/viewform" 
@@ -155,8 +158,33 @@
 </section>
 
 <footer>
-  &copy; 2025 CraftMegaFun - Wszystkie prawa zastrzeżone.
+  © 2025 CraftMegaFun — Serwer Minecraft LifeSteal
 </footer>
+
+<script>
+document.addEventListener('click', function(e){
+  var el = e.target.closest && e.target.closest('.copy-ip');
+  if(!el) return;
+  var ip = el.getAttribute('data-ip') || el.textContent.trim();
+  if(!ip) return;
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(ip).then(function(){
+      var old = el.textContent;
+      el.textContent = 'Skopiowano!';
+      setTimeout(function(){ el.textContent = ip; }, 1400);
+    });
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = ip;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); el.textContent = 'Skopiowano!'; } catch(e){}
+    ta.remove();
+    setTimeout(function(){ el.textContent = ip; }, 1400);
+  }
+});
+</script>
 
 </body>
 </html>
