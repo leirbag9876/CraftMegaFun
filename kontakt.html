@@ -31,7 +31,7 @@
       font-size: 1.2em;
     }
 
-    /* Nawigacja jak na głównej stronie */
+    /* Nawigacja */
     nav.navbar {
       display: flex;
       justify-content: center;
@@ -40,22 +40,19 @@
       margin: 20px 0;
     }
 
-    .nav-box {
+    .nav-box, .nav-link {
       padding: 10px 20px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
       transition: 0.3s;
       font-size: 1em;
-      background: #111;
-      border: 2px solid #0ff;
-      color: #0ff;
+      color: #fff; /* wszystkie linki białe */
     }
 
-    .nav-box:hover {
-      background: #0ff;
-      color: #000;
-      border-color: #00cccc;
+    .nav-box:hover, .nav-link:hover {
+      color: #0a3d66; /* po najechaniu ciemnoniebieskie */
+      transform: translateY(-2px);
     }
 
     .shop-box {
@@ -108,11 +105,22 @@
 
     /* Stopka */
     footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
       background: rgba(0,0,0,0.8);
-      margin-top: 40px;
+      padding: 30px 20px;
+      color: #ccc;
+      font-size: 0.9em;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    footer a:hover {
+      color: #0a3d66;
     }
 
     /* Kopiowanie IP */
@@ -140,7 +148,7 @@
 <nav class="navbar">
   <a href="index.html" class="nav-box">Strona Główna</a>
   <a href="rekrutacja.html" class="nav-box">Rekrutacja</a>
-  <a href="sklep.html" class="nav-box shop-box">Sklep</a>
+  <a href="sklep.html" class="nav-link shop-box">Sklep</a>
   <a href="pomoc.html" class="nav-box">Pomoc</a>
   <a href="informacje.html" class="nav-box">Informacje</a>
 </nav>
@@ -158,7 +166,21 @@
 </section>
 
 <footer>
-  © 2025 CraftMegaFun — Serwer Minecraft LifeSteal
+  <p>© 2021 - 2025 CraftMegaFun. Wszelkie prawa zastrzeżone.</p>
+  
+  <div style="margin: 15px 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
+    <a href="index.html" class="nav-box" style="padding:5px 10px; font-size:0.9em;">Menu</a>
+    <a href="voucher.html" class="nav-box" style="padding:5px 10px; font-size:0.9em;">Voucher</a>
+    <a href="informacje.html" class="nav-box" style="padding:5px 10px; font-size:0.9em;">Informacje</a>
+    <a href="sklep.html" class="nav-box shop-box" style="padding:5px 10px; font-size:0.9em;">Sklep</a>
+    <a href="rekrutacja.html" class="nav-box" style="padding:5px 10px; font-size:0.9em;">Rekrutacja</a>
+    <a href="pomoc.html" class="nav-box" style="padding:5px 10px; font-size:0.9em;">Pomoc</a>
+  </div>
+
+  <p>© 2025 Lifesteal. Wszelkie prawa zastrzeżone.</p>
+  <p>Serwer Lifesteal nie jest w żaden sposób powiązany z firmą Mojang i/lub Microsoft.</p>
+  <p>Zasilane przez - darmowy ItemShop Minecraft.</p>
+  <p>© 2025 CraftMegaFun — Serwer Minecraft LifeSteal</p>
 </footer>
 
 <script>
