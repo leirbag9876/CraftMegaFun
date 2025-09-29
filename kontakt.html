@@ -24,18 +24,6 @@
       color: #0ff;
       font-size: 3em;
     }
-    
-    header h3 {
-      margin: 0;
-      color: #0ff;
-      font-size: 2em;
-    }
-        
-    header p {
-      margin: 10px 0 0 0;
-      color: #bbb;
-      font-size: 1.2em;
-    }
 
     /* Nawigacja */
     nav.navbar {
@@ -74,15 +62,19 @@
       transform: translateY(-2px);
     }
 
-    section.hero {
+    /* Główna treść */
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
       text-align: center;
-      padding: 80px 20px;
     }
 
-    section.hero h2 {
+    main h2 {
       color: #ff6600;
-      margin: 20px 0 40px 0;
-      font-size: 2em;
+      margin-bottom: 25px;
     }
 
     .hero-buttons {
@@ -92,7 +84,7 @@
       flex-wrap: wrap;
     }
 
-    .btn-main, .btn-secondary {
+    .btn-main {
       display: inline-block;
       padding: 15px 30px;
       border-radius: 8px;
@@ -101,13 +93,11 @@
       transition: 0.3s;
       font-size: 1.1em;
       min-width: 200px;
+      background: #0ff;
+      color: #000;
     }
 
-    .btn-main { background: #0ff; color: #000; }
     .btn-main:hover { background: #00cccc; }
-
-    .btn-secondary { background: #111; border: 2px solid #0ff; color: #0ff; }
-    .btn-secondary:hover { background: #0ff; color: #000; }
 
     /* Stopka */
     footer {
@@ -128,55 +118,41 @@
     footer a:hover {
       color: #0a3d66;
     }
-
-    /* Kopiowanie IP */
-    .copy-ip {
-      display: inline-block;
-      background: #0ff;
-      color: #000;
-      font-weight: 700;
-      padding: 6px 10px;
-      border-radius: 6px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background .15s ease;
-    }
-    .copy-ip:hover { background: #00cccc; }
   </style>
 </head>
 <body>
 
 <header>
-  <h3>CraftMegaFun</h3
+  <h1>CraftMegaFun</h1>
 </header>
 
 <nav class="navbar">
-  <a href="https://craftmegafun.myis.pl/shop" class="nav-box">Strona Główna</a>
+  <a href="index.html" class="nav-box">Strona Główna</a>
   <a href="rekrutacja.html" class="nav-box">Rekrutacja</a>
-  <a href="https://yshop.pl/shop/craftmegafun/server/craftmegafun" class="nav-link shop-box">Sklep</a>
+  <a href="sklep.html" class="nav-link shop-box">Sklep</a>
   <a href="pomoc.html" class="nav-box">Pomoc</a>
-  <a href="https://craftmegafun.myis.pl/p/klucze" class="nav-box">Informacje</a>
+  <a href="informacje.html" class="nav-box">Informacje</a>
 </nav>
 
-<section class="hero">
-  <h1>Obecnie rekrutujemy na poniższe role:</h1>
+<main>
+  <h2>Obecnie rekrutujemy na poniższe role:</h2>
   <div class="hero-buttons">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeHDKvIQXcnqMyJtBGK2UfmAa6tqk3SE0EAXvKUuqnGhDHIAw/viewform" 
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeHDKvIQXcnqMyJtBGK2UfmAa6tqk3SE0EAXvKUuqnGhDHIAw/viewform"
        class="btn-main" target="_blank" rel="noopener noreferrer">Budowniczy</a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScPMPfkuXFSQUT-oNEgrvQjxf5ISux8oTZR5DpRKU4P_UJHTg/viewform" 
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScPMPfkuXFSQUT-oNEgrvQjxf5ISux8oTZR5DpRKU4P_UJHTg/viewform"
        class="btn-main" target="_blank" rel="noopener noreferrer">Moderator</a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSctX33xsPeyxpNHs7UK0K5pAu4ivpJsClHiIM_-ZMmBOeD6_Q/viewform" 
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSctX33xsPeyxpNHs7UK0K5pAu4ivpJsClHiIM_-ZMmBOeD6_Q/viewform"
        class="btn-main" target="_blank" rel="noopener noreferrer">ChatMod</a>
   </div>
-</section>
+</main>
 
 <footer>
   <p>© 2021 - 2025 CraftMegaFun. Wszelkie prawa zastrzeżone.</p>
-  
+
   <div style="margin: 15px 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
-    <a href="https://craftmegafun.myis.pl/shop" class="nav-box" style="padding:5px 10px; font-size:0.9em;">Strona główna</a>
-    <a href="https://craftmegafun.myis.pl/p/klucze" class="nav-box" style="padding:5px 10px; font-size:0.9em;">Informacje</a>
-    <a href="https://yshop.pl/shop/craftmegafun/server/craftmegafun" class="nav-box shop-box" style="padding:5px 10px; font-size:0.9em;">Sklep</a>
+    <a href="index.html" class="nav-box" style="padding:5px 10px; font-size:0.9em;">Strona główna</a>
+    <a href="informacje.html" class="nav-box" style="padding:5px 10px; font-size:0.9em;">Informacje</a>
+    <a href="sklep.html" class="nav-box shop-box" style="padding:5px 10px; font-size:0.9em;">Sklep</a>
     <a href="rekrutacja.html" class="nav-box" style="padding:5px 10px; font-size:0.9em;">Rekrutacja</a>
     <a href="pomoc.html" class="nav-box" style="padding:5px 10px; font-size:0.9em;">Pomoc</a>
   </div>
@@ -186,31 +162,6 @@
   <p>Zasilane przez - darmowy ItemShop Minecraft.</p>
   <p>© 2025 CraftMegaFun — Serwer Minecraft LifeSteal</p>
 </footer>
-
-<script>
-document.addEventListener('click', function(e){
-  var el = e.target.closest && e.target.closest('.copy-ip');
-  if(!el) return;
-  var ip = el.getAttribute('data-ip') || el.textContent.trim();
-  if(!ip) return;
-
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(ip).then(function(){
-      var old = el.textContent;
-      el.textContent = 'Skopiowano!';
-      setTimeout(function(){ el.textContent = ip; }, 1400);
-    });
-  } else {
-    var ta = document.createElement('textarea');
-    ta.value = ip;
-    document.body.appendChild(ta);
-    ta.select();
-    try { document.execCommand('copy'); el.textContent = 'Skopiowano!'; } catch(e){}
-    ta.remove();
-    setTimeout(function(){ el.textContent = ip; }, 1400);
-  }
-});
-</script>
 
 </body>
 </html>
